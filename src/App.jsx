@@ -1,14 +1,14 @@
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import Index from "./pages/Index.jsx";
+import { ChakraProvider } from '@chakra-ui/react';
+import Header from './components/Header';
+import MainContent from './components/MainContent';
+import Footer from './components/Footer';
 
-function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route exact path="/" element={<Index />} />
-      </Routes>
-    </Router>
-  );
-}
+const App = () => (
+  <ChakraProvider>
+    <Header />
+    <MainContent />
+    <Footer />
+  </ChakraProvider>
+);
 
 export default App;
